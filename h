@@ -1,3 +1,28 @@
+--Bypasser
+--authority
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 local admin = game.Players:FindFirstChild("d4rkagee")
 local chat = game:GetService("Chat")
 
